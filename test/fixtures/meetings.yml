@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team: MyString
+  away_team: MyString
+  date: 2025-04-26
+  gate_choice: MyString
+
+two:
+  home_team: MyString
+  away_team: MyString
+  date: 2025-04-26
+  gate_choice: MyString
