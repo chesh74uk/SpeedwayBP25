@@ -1,0 +1,18 @@
+<%= simple_form_for @meeting do |f| %>
+  <%= f.input :date, as: :string, placeholder: "#{Date.today}" %>
+  <%= f.input :home_team, collection: @team_names %>
+  <%= f.input :away_team, collection: @team_names %>
+  <%= f.input :gate_choice, collection: ["1 and 3", "2 and 4"] %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="d-flex bd-highlight">
+        <div class="p-2 flex-fill bd-highlight">
+          <%= f.submit data: {turbo_frame: "_top"}, class: "btn btn-sm btn-outline-success" %>
+        </div>
+        <div class="p-2 flex-fill bd-highlight">
+          <%= link_to "Cancel", meetings_path, class: "btn btn-sm btn-outline-info" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
