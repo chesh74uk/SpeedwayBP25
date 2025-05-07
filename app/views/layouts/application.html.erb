@@ -25,6 +25,10 @@
   </head>
 
   <body>
+  <nav>
+    <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+  </nav>
+
   <div class="container-fluid">
     <%= yield %>
   </div>

@@ -6,9 +6,11 @@ class MeetingsController < ApplicationController
 
   def new
     @meeting = Meeting.new
+    @team_names = Team.select(:team_name).order(:team_name).distinct
   end
 
   def edit
+    @team_names = Team.select(:team_name).order(:team_name).distinct
   end
 
   def create
